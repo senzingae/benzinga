@@ -1,9 +1,9 @@
-# Gu.Wpf.NumericInput
+# TreeView
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
- [![NuGet](https://img.shields.io/nuget/v/Gu.Wpf.NumericInput.svg)](https://www.nuget.org/packages/Gu.Wpf.NumericInput/)
+ [![NuGet](https://img.shields.io/nuget/v/TreeView.svg)](https://www.nuget.org/packages/TreeView/)
 [![Build status](https://ci.appveyor.com/api/projects/status/e0nwl8lha4nsoxq7/branch/master?svg=true)](https://ci.appveyor.com/project/JohanLarsson/gu-wpf-numericinput/branch/master)
-[![ci](https://github.com/GuOrg/Gu.Wpf.NumericInput/actions/workflows/ci.yml/badge.svg)](https://github.com/GuOrg/Gu.Wpf.NumericInput/actions/workflows/ci.yml)
-[![Join the chat at https://gitter.im/JohanLarsson/Gu.Wpf.NumericInput](https://badges.gitter.im/JohanLarsson/Gu.Wpf.NumericInput.svg)](https://gitter.im/JohanLarsson/Gu.Wpf.NumericInput?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![ci](https://github.com/GuOrg/TreeView/actions/workflows/ci.yml/badge.svg)](https://github.com/GuOrg/TreeView/actions/workflows/ci.yml)
+[![Join the chat at https://gitter.im/JohanLarsson/TreeView](https://badges.gitter.im/JohanLarsson/TreeView.svg)](https://gitter.im/JohanLarsson/TreeView?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Textboxes for numeric input in WPF.
 - DoubleBox
@@ -45,12 +45,12 @@ Textboxes for numeric input in WPF.
     - [5.1.5. NumericBox.StringFormat](#515-numericboxstringformat)
     - [5.1.6. NumericBox.DecimalDigits](#516-numericboxdecimaldigits)
     - [5.1.7. NumericBox.AllowSpinners](#517-numericboxallowspinners)
-  - [5.2. Gu.Wpf.NumericInput.Select.TextBox](#52-guwpfnumericinputselecttextbox)
+  - [5.2. TreeView.Select.TextBox](#52-guwpfnumericinputselecttextbox)
     - [5.2.1. TextBox.SelectAllOnGotKeyboardFocus](#521-textboxselectallongotkeyboardfocus)
     - [5.2.2. TextBox.SelectAllOnClick](#522-textboxselectallonclick)
     - [5.2.3. TextBox.SelectAllOnDoubleClick](#523-textboxselectallondoubleclick)
     - [5.2.4. TextBox.MoveFocusOnEnter](#524-textboxmovefocusonenter)
-  - [5.3 Gu.Wpf.NumericInput.Touch.TextBox](#53-guwpfnumericinputtouchtextbox)
+  - [5.3 TreeView.Touch.TextBox](#53-guwpfnumericinputtouchtextbox)
     - [5.3.1. TextBox.ShowTouchKeyboardOnTouchEnter](#531-textboxshowtouchkeyboardontouchenter)
 - [6. Style and Template keys](#6-style-and-template-keys)
 
@@ -208,7 +208,7 @@ Inherits so setting it on a panel or window sets it for all child controls inher
 Sample:
 
 ```xaml
-<UserControl x:Class="Gu.Wpf.NumericInput.Demo.DemoView"
+<UserControl x:Class="TreeView.Demo.DemoView"
              ...
              xmlns:numeric="http://gu.se/NumericInput">
     <Grid numeric:NumericBox.Culture="sv-se">
@@ -226,7 +226,7 @@ Inherits so setting it on a panel or window sets it for all child controls inher
 Sample:
 
 ```xaml
-<UserControl x:Class="Gu.Wpf.NumericInput.Demo.DemoView"
+<UserControl x:Class="TreeView.Demo.DemoView"
              ...
              xmlns:numeric="http://gu.se/NumericInput">
     <Grid numeric:NumericBox.ValidationTrigger="PropertyChanged">
@@ -244,7 +244,7 @@ Inherits so setting it on a panel or window sets it for all child controls inher
 Sample:
 
 ```xaml
-<UserControl x:Class="Gu.Wpf.NumericInput.Demo.DemoView"
+<UserControl x:Class="TreeView.Demo.DemoView"
              ...
              xmlns:numeric="http://gu.se/NumericInput">
     <Grid numeric:NumericBox.CanValueBeNull="True">
@@ -262,7 +262,7 @@ Inherits so setting it on a panel or window sets it for all child controls inher
 Sample:
 
 ```xaml
-<UserControl x:Class="Gu.Wpf.NumericInput.Demo.DemoView"
+<UserControl x:Class="TreeView.Demo.DemoView"
              ...
              xmlns:numeric="http://gu.se/NumericInput">
     <Grid numeric:NumericBox.NumberStyles="AllowDecimalPoint, AllowLeadingSign">
@@ -280,7 +280,7 @@ Inherits so setting it on a panel or window sets it for all child controls inher
 Sample:
 
 ```xaml
-<UserControl x:Class="Gu.Wpf.NumericInput.Demo.DemoView"
+<UserControl x:Class="TreeView.Demo.DemoView"
              ...
              xmlns:numeric="http://gu.se/NumericInput">
     <Grid numeric:NumericBox.StringFormat="F2">
@@ -298,7 +298,7 @@ Inherits so setting it on a panel or window sets it for all child controls inher
 Sample:
 
 ```xaml
-<UserControl x:Class="Gu.Wpf.NumericInput.Demo.DemoView"
+<UserControl x:Class="TreeView.Demo.DemoView"
              ...
              xmlns:numeric="http://gu.se/NumericInput">
     <Grid numeric:NumericBox.DecimalDigits="-2">
@@ -316,7 +316,7 @@ Inherits so setting it on a panel or window sets it for all child controls inher
 Sample:
 
 ```xaml
-<UserControl x:Class="Gu.Wpf.NumericInput.Demo.DemoView"
+<UserControl x:Class="TreeView.Demo.DemoView"
              ...
              xmlns:numeric="http://gu.se/NumericInput">
     <Grid numeric:NumericBox.AllowSpinners="True">
@@ -327,7 +327,7 @@ Sample:
     </Grid>
 ```
 
-## 5.2. Gu.Wpf.NumericInput.Select.TextBox
+## 5.2. TreeView.Select.TextBox
 ### 5.2.1. TextBox.SelectAllOnGotKeyboardFocus
 Selects all text in a textbox whgen it gets keyboard focus.
 Inherits so setting it on a panel or window sets it for all child controls inheriting from `TextBox`.
@@ -335,7 +335,7 @@ Inherits so setting it on a panel or window sets it for all child controls inher
 Sample:
 
 ```xaml
-<UserControl x:Class="Gu.Wpf.NumericInput.Demo.DemoView"
+<UserControl x:Class="TreeView.Demo.DemoView"
              ...
              xmlns:select="http://gu.se/Select">
     <Grid select:TextBox.SelectAllOnGotKeyboardFocus="True">
@@ -353,7 +353,7 @@ Inherits so setting it on a panel or window sets it for all child controls inher
 Sample:
 
 ```xaml
-<UserControl x:Class="Gu.Wpf.NumericInput.Demo.DemoView"
+<UserControl x:Class="TreeView.Demo.DemoView"
              ...
              xmlns:select="http://gu.se/Select">
     <Grid select:TextBox.SelectAllOnClick="True">
@@ -372,7 +372,7 @@ Inherits so setting it on a panel or window sets it for all child controls inher
 Sample:
 
 ```xaml
-<UserControl x:Class="Gu.Wpf.NumericInput.Demo.DemoView"
+<UserControl x:Class="TreeView.Demo.DemoView"
              ...
              xmlns:select="http://gu.se/Select">
     <Grid select:TextBox.SelectAllOnDoubleClick="True">
@@ -391,7 +391,7 @@ Inherits so setting it on a panel or window sets it for all child controls inher
 Sample:
 
 ```xaml
-<UserControl x:Class="Gu.Wpf.NumericInput.Demo.DemoView"
+<UserControl x:Class="TreeView.Demo.DemoView"
              ...
              xmlns:select="http://gu.se/Select">
     <Grid select:TextBox.MoveFocusOnEnter="True"
@@ -403,7 +403,7 @@ Sample:
     </Grid>
 ```
 
-## 5.3 Gu.Wpf.NumericInput.Touch.TextBox
+## 5.3 TreeView.Touch.TextBox
 ### 5.3.1. TextBox.ShowTouchKeyboardOnTouchEnter
 Shows onscreen keyboard on touch enter for all controls inheriting from `TextBox`.
 Inherits so setting it on a panel or window sets it for all child controls inheriting from `TextBox`.
@@ -411,7 +411,7 @@ Inherits so setting it on a panel or window sets it for all child controls inher
 Sample:
 
 ```xaml
-<UserControl x:Class="Gu.Wpf.NumericInput.Demo.DemoView"
+<UserControl x:Class="TreeView.Demo.DemoView"
              ...
              xmlns:touch="http://gu.se/Touch">
     <Grid touch:TextBox.ShowTouchKeyboardOnTouchEnter="True">
