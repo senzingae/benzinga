@@ -136,6 +136,6 @@
     <value>Please provide valid input.</value>
   </data>
   <data name="Syntax_error_in_regex_pattern" xml:space="preserve">
-    <value>Syntax error in regex pattern</value>
+    <value>Syntax error in regex pattern.</value>
   </data>
 </root>
