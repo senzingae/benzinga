@@ -25,11 +25,12 @@
         /// <summary>Gets the text that was found invalid.</summary>
         public string Text { get; }
 
-        public static CanParseValidationResult CreateErrorResult(Type type, string text, IFormatProvider culture)
+        public static CanParseValidationResult CreateErrorResult<T>(string text, NumericBox<T> box)
+             where T : struct, IFormattable, IComparable<T>, IConvertible, IEquatable<T>
         {
-            var formatAndCulture = DefaultFormatAndCulture.GetOrCreate(culture);
+            var formatAndCulture = DefaultFormatAndCulture.GetOrCreate(box.Culture);
             var message = formatAndCulture.Format;
-            return new CanParseValidationResult(type, text, culture, formatAndCulture, false, message);
+            return new CanParseValidationResult(typeof(T), text, box.Culture, formatAndCulture, false, message);
         }
     }
 }
